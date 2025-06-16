@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stealth Coffee Game</title>
+<style>
+  body {
+    background:#111;
+    color:#eee;
+    font-family:sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:100vh;
+    margin:0;
+  }
+  #game {
+    position:relative;
+    width:600px;
+    height:360px;
+    background:#222;
+    border:2px solid #555;
+  }
+  .cell {
+    position:absolute;
+    width:40px;
+    height:40px;
+  }
+  .wall {background:#444;}
+  #player {background:#0f0;}
+  .npc {background:#f00;}
+  .coffee {background:#964B00;}
+  #hud {margin-top:10px;}
+  #overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    display:none;
+    flex-direction:column;
+    text-align:center;
+  }
+  .controls {margin-top:10px;}
+  .controls button {
+    width:60px;
+    height:60px;
+    margin:5px;
+    font-size:24px;
+  }
+</style>
+</head>
+<body>
+<div id="game">
+  <div id="overlay"></div>
+</div>
+<div id="hud">Coffee: <span id="coffeeCount">0</span> / 5 | Stealth: <span id="stealth">5</span></div>
+<div class="controls">
+  <div>
+    <button id="up">↑</button>
+  </div>
+  <div>
+    <button id="left">←</button>
+    <button id="down">↓</button>
+    <button id="right">→</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
